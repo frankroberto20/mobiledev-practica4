@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="MenuApp.Controls.MenuView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="this">
+    <ContentView.Content>
+        <Frame
+            Margin="5"
+            Padding="10"
+            BindingContext="{x:Reference this}">
+            <Grid RowDefinitions="*,Auto,50" RowSpacing="10">
+                <Image
+                    Grid.Row="0"
+                    Margin="0,10,0,0"
+                    HeightRequest="70"
+                    HorizontalOptions="Center"
+                    Scale="3"
+                    Source="{Binding MenuIconSource}" />
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource HeaderLabelStyle}"
+                    Text="{Binding MenuTitle}"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Row="2"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DescriptionLabelStyle}"
+                    Text="{Binding MenuDescription}" />
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>
